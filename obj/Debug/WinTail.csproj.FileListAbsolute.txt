@@ -1,1 +1,10 @@
 C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\WinTail.exe.config
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\WinTail.exe
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\WinTail.pdb
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\Akka.dll
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\Newtonsoft.Json.dll
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\Akka.xml
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\bin\Debug\Newtonsoft.Json.xml
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\obj\Debug\WinTail.csprojResolveAssemblyReference.cache
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\obj\Debug\WinTail.exe
+C:\Users\owuor\Documents\Visual Studio 2015\Workspace\akka-bootcamp\src\Unit-1\DoThis\obj\Debug\WinTail.pdb

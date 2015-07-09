@@ -13,7 +13,7 @@ namespace WinTail
         private readonly IActorRef _consoleWriterActor;
         private readonly IActorRef _tailCoordinatorActor;
 
-        private FileValidatorActor(IActorRef consoleWriterActor, IActorRef tailCoordinatorActor)
+        public FileValidatorActor(IActorRef consoleWriterActor, IActorRef tailCoordinatorActor)
         {
             _consoleWriterActor = consoleWriterActor;
             _tailCoordinatorActor = tailCoordinatorActor;

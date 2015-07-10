@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using Akka.Actor;
 using System.IO;
 
@@ -10,6 +6,10 @@ namespace WinTail
 {
     class TailActor : UntypedActor
     {
+        private FileObserver _observer;
+        private Stream _fileStream;
+        private StreamReader _fileStreamReader;
+
         #region Message Type
         public class FileWrite
         {
@@ -46,15 +46,16 @@ namespace WinTail
 
         private readonly string _filepath;
         private readonly IActorRef _reporterActor;
-        private readonly FileObserver _observer;
-        private readonly Stream _fileStream;
-        private readonly StreamReader _fileStreamReader;
+
 
         public TailActor(IActorRef reporterActor, string filepath)
         {
             _reporterActor = reporterActor;
             _filepath = filepath;
+        }
 
+        protected override void PreStart()
+        {
             //start watching file for changes
             _observer = new FileObserver(Self, Path.GetFullPath(_filepath));
             _observer.Start();
@@ -69,6 +70,15 @@ namespace WinTail
             Self.Tell(new InitialRead(_filepath, text));
         }
 
+
+        protected override void PostStop()
+        {
+            _observer.Dispose();
+            _observer = null;
+            _fileStreamReader.Close();
+            _fileStreamReader.Dispose();
+            base.PostStop();
+        }
 
         protected override void OnReceive(object message)
         {

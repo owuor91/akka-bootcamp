@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.IO;
 using Akka.Actor;
 
@@ -37,7 +33,7 @@ namespace WinTail
                 }
                 else
                 {
-                    _tailCoordinatorActor.Tell(new Messages.InputError.ValidationError(string.Format("{0} is not a valid URI on disk", msg)));
+                    _consoleWriterActor.Tell(new Messages.InputError.ValidationError(string.Format("{0} is not a valid URI on disk", msg)));
                     Sender.Tell(new Messages.ContinueProcessing());
                 }
             }
